@@ -6,7 +6,7 @@ export const Container = styled.div`
   margin: 1rem;
   box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
   text-align: center;
-  background-color: white;
+  background-color: ${(props) => props.theme.colors.backgroundCard};
   border-radius: 3px;
 
   .data {
@@ -24,7 +24,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     height: 250px;
-    background-color: #eceff1;
+    background-color: ${(props) => props.theme.colors.backgroundImage};
     border-radius: 3px;
     margin-bottom: 1rem;
 

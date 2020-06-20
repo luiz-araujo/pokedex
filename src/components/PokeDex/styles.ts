@@ -11,12 +11,12 @@ export const Container = styled.div`
   }
 
   .winner {
-    color: #4caf50;
+    color: ${(props) => props.theme.colors.winner};
     margin-top: 25px;
   }
 
   .loser {
-    color: #e91e63;
+    color: ${(props) => props.theme.colors.loser};
     margin-top: 25px;
   }
 

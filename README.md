@@ -26,7 +26,7 @@ A Pokedex game based on the Colt Steele course.
 This game divides cards between 2 players and the one with the highest score is the winner
 
 <h1 align="center">
-    <img alt="Example" title="Example" src=".github/pokedex.png" width="500px" />
+    <img alt="Game Screen" title="Game Screen" src=".github/pokedex.png" width="700px" />
 </h1>
 
 ## How to run

@@ -1,6 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import PokeDex from '../PokeDex';
+import React, { useState, useEffect, useContext } from 'react';
+
+import Switch from 'react-switch';
+import { ThemeContext } from 'styled-components';
+import { shade } from 'polished';
+
 import api from '../../services/api';
+import PokeDex from '../PokeDex';
+
+import { SwitchWrapper } from './styles';
+
+interface Props {
+  toggleTheme(): void;
+}
 
 interface Request {
   id: number;
@@ -9,9 +20,10 @@ interface Request {
   base_experience: number;
 }
 
-const PokeGame: React.FC = () => {
+const PokeGame: React.FC<Props> = ({ toggleTheme }) => {
   const [hand1, setHand1] = useState<Request[]>([]);
   const [hand2, setHand2] = useState<Request[]>([]);
+  const { colors, title } = useContext(ThemeContext);
 
   useEffect(() => {
     async function loadPokemons(): Promise<void> {
@@ -33,6 +45,20 @@ const PokeGame: React.FC = () => {
 
   return (
     <>
+      <SwitchWrapper>
+        <Switch
+          onChange={toggleTheme}
+          checked={title === 'dark'}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          height={10}
+          width={40}
+          handleDiameter={20}
+          offColor={shade(0.15, colors.barColor)}
+          onColor={colors.barColor}
+        />
+      </SwitchWrapper>
+
       <PokeDex pokemon={hand1} exp={exp1} isWinner={exp1 > exp2} />
       <PokeDex pokemon={hand2} exp={exp2} isWinner={exp2 > exp1} />
     </>
