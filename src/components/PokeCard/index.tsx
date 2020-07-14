@@ -17,12 +17,13 @@ const PokeCard: React.FC<Request> = ({ id, name, type, base_experience }) => {
 
   return (
     <Container>
-      <h1 className="title">{name}</h1>
-      <div className="image">
+      <div className="details">
+        <h2>{name}</h2>
+        <p>{base_experience}</p>
+        <p>{type}</p>
+        <img src={imgSrc} alt={name} />
         <img src={imgSrc} alt={name} />
       </div>
-      <div className="data">Type: {type}</div>
-      <div className="data">EXP: {base_experience}</div>
     </Container>
   );
 };

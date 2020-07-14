@@ -27,7 +27,7 @@ const PokeDex: React.FC<PokemonProps> = ({ pokemon, exp, isWinner }) => {
     <Container>
       {title}
       <h4 className="total-exp">Total Experience: {exp}</h4>
-      <div className="cards">
+      <ul className="cards">
         {pokemon.map((p) => (
           <PokeCard
             key={p.id}
@@ -37,7 +37,7 @@ const PokeDex: React.FC<PokemonProps> = ({ pokemon, exp, isWinner }) => {
             base_experience={p.base_experience}
           />
         ))}
-      </div>
+      </ul>
     </Container>
   );
 };

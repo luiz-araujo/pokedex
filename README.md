@@ -89,6 +89,10 @@ $ yarn start
 
 After merging your receipt request to done, you can delete a branch from yours.
 
+## Credits
+
+- [Layout](https://codepen.io/andybarefoot/pen/Gwggor) - Interface inspired in Playing card CSS Grid eCommerce layout by Andy Barefoot available on CodePen
+
 ## License
 
 This project is under the MIT license. See the [LICENSE](https://github.com/luiz-araujo/pokedex/blob/master/LICENSE) for details.
